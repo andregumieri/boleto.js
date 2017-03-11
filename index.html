@@ -59,11 +59,12 @@
         <section id="install" class="main">
           <header class="major">
             <h2>Installation</h2>
-            <p>You can download <strong>boleto.js</strong> using npm or you can get its code.</p>
+            <p>You can download <strong>boleto.js</strong> using npm, Bower or you can get its code.</p>
           </header>
 
-          <h3><span class="icon minor style1 fa-code"></span> Using npm</h3>
+          <h3><span class="icon minor style1 fa-code"></span> Using package managers</h3>
           <p><pre class="snippet"><code class="bash">npm install boleto.js --save</code></pre></p>
+          <p><pre class="snippet"><code class="bash">bower install boleto.js</code></pre></p>
 
           <p>&nbsp;</p>
 
@@ -91,6 +92,18 @@
             <pre class="snippet"><code class="html">&lt;script&gt;
   var number = '34195000080123320318964221470004584410000002000';
   new Boleto(number).toSVG('#boleto');
+&lt;/script&gt;</code></pre>
+          </p>
+
+          <p>&nbsp;</p>
+
+          <h3>Alternative Usage</h3>
+          <p class="content">
+            Instead of appending the SVG to the source code, you can store it in a variable. To do so, simply do not provide a CSS selector when generating the SVG:
+            <pre class="snippet"><code class="html">&lt;script&gt;
+  var number = '34195000080123320318964221470004584410000002000';
+  // Data will be stored in a variable
+  var boleto = new Boleto(number).toSVG();
 &lt;/script&gt;</code></pre>
           </p>
 
